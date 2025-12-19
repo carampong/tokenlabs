@@ -21,8 +21,8 @@ import {
   Hash,
   QrCode
 } from 'lucide-react';
-import { BlockchainNetwork, TokenConfig, DeploymentStatus, AIAnalysis, AdminSettings } from './types';
-import { analyzeTokenomics, generateTokenMetadata } from './services/geminiService';
+import { BlockchainNetwork, TokenConfig, DeploymentStatus, AIAnalysis, AdminSettings } from './types.ts';
+import { analyzeTokenomics, generateTokenMetadata } from './services/geminiService.ts';
 
 // --- Constants & Defaults ---
 const DEFAULT_ADMIN_SETTINGS: AdminSettings = {
@@ -200,7 +200,7 @@ const AdminPanel = ({ settings, onUpdate, onBack }: { settings: AdminSettings, o
                 <input 
                   className="flex-1 bg-black border border-gray-700 rounded-xl px-4 py-3 text-indigo-400 mono text-sm"
                   value={item.address}
-                  onChange={e => setLocalSettings({...localSettings, [item.key as keyof AdminSettings]: e.target.value} as AdminSettings)}
+                  onChange={e => setLocalSettings({...localSettings, [item.key]: e.target.value} as AdminSettings)}
                 />
                 <div className="w-16 h-16 bg-white rounded-lg p-1 shrink-0 overflow-hidden">
                   <img src={getQrUrl(item.address)} alt="QR Preview" className="w-full h-full object-contain" />
