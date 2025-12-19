@@ -1,0 +1,8 @@
+
+{
+  "name": "TokenLabs - Multi-Chain Token Creator",
+  "description": "A professional-grade, simple-to-use platform for creating custom crypto tokens on Solana, Ethereum, and XRP. Features AI-powered tokenomics advice and a streamlined 3-step minting process.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
